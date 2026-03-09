@@ -1,0 +1,146 @@
+# ==================================================
+
+# Scalable Data-Driven E-commerce Backend API
+
+# Django + DRF + PostgreSQL
+
+# ==================================================
+
+# ------------------------------
+
+# Python
+
+# ------------------------------
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.so
+
+# ------------------------------
+
+# Virtual Environments
+
+# ------------------------------
+
+venv/
+env/
+ENV/
+.venv/
+
+# ------------------------------
+
+# Environment Variables
+
+# ------------------------------
+
+.env
+.env.*
+!.env.example
+
+# ------------------------------
+
+# Django
+
+# ------------------------------
+
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# ------------------------------
+
+# User Uploaded Media
+
+# ------------------------------
+
+media/
+
+# ------------------------------
+
+# Static files (if collectstatic used)
+
+# ------------------------------
+
+staticfiles/
+
+# ------------------------------
+
+# Python Build / Packaging
+
+# ------------------------------
+
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ------------------------------
+
+# Unit Tests / Coverage
+
+# ------------------------------
+
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# ------------------------------
+
+# IDE / Editor
+
+# ------------------------------
+
+.vscode/
+.idea/
+
+# ------------------------------
+
+# OS Files
+
+# ------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------
+
+# Jupyter Notebook
+
+# ------------------------------
+
+.ipynb_checkpoints
+
+# ------------------------------
+
+# Temporary Files
+
+# ------------------------------
+
+*.swp
+*.swo
+*~
+
+# ------------------------------
+
+# Logs
+
+# ------------------------------
+
+logs/
+*.log
