@@ -20,6 +20,10 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
         return user
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "email", "full_name", "role", "is_active"]
 
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
@@ -38,9 +42,9 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError("Account disabled")
 
         refresh = RefreshToken.for_user(user)
-
+        user_data = UserSerializer(user).data
         return {
-            "user": user,
+            "user": user_data,
             "refresh": str(refresh),
             "access": str(refresh.access_token),
         }
