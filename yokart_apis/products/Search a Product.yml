@@ -1,0 +1,37 @@
+info:
+  name: Search a Product
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: http://127.0.0.1:8000/api/v1/products?category=1&ordering=price&min_price=0&max_price=2000&page=1
+  params:
+    - name: search
+      value: iphone
+      type: query
+      disabled: true
+    - name: category
+      value: "1"
+      type: query
+    - name: ordering
+      value: price
+      type: query
+    - name: min_price
+      value: "0"
+      type: query
+    - name: max_price
+      value: "2000"
+      type: query
+    - name: page
+      value: "1"
+      type: query
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjM1MTE1LCJpYXQiOjE3NzMyMzMzMTUsImp0aSI6ImM0M2VlNDg5M2E2ZDQxNjg4NzA2YTgwZTgzNmYxZjFjIiwidXNlcl9pZCI6IjMifQ.8CKe_pmB5NekmWERxnGOdS0hpL8n1U1PT8DVexR3fFQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

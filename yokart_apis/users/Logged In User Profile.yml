@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: http://127.0.0.1:8000/api/v1/users/profile/
-  auth: inherit
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjI2MDUzLCJpYXQiOjE3NzMyMjU3NTMsImp0aSI6IjhjODIyODU5ODgxOTRiYjBhNzU4ZDkxNThlNTMyZWRjIiwidXNlcl9pZCI6IjIifQ.QOOKPPf4bIHrXDXoZq10nRG6jUgqXX9811tbx_9Q288
 
 settings:
   encodeUrl: true

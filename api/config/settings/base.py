@@ -64,6 +64,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 #----------------------------------
+from datetime import timedelta
+
 # 1 Tell Django to Use This User Model Instead of the Default One
 AUTH_USER_MODEL = "users.User"
 
@@ -85,6 +87,48 @@ REST_FRAMEWORK = {
     ],
     
 }
+# ⚙️ JWT Token Configuration in Django settings.py
+# This controls how long authentication tokens remain valid
+
+SIMPLE_JWT = {
+    # 🕐 Access Token Lifetime
+    # This is the token used for API requests (sent in Authorization header)
+    # After this time, the token expires and cannot be used anymore
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),  # Default is 5 minutes
+    
+    # 🔄 Refresh Token Lifetime
+    # This token is used to get new access tokens without re-login
+    # It lives longer than access token
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # Default is 1 day
+    
+    # 🔁 Token Rotation Settings
+    'ROTATE_REFRESH_TOKENS': True,   # Get new refresh token when refreshing
+    'BLACKLIST_AFTER_ROTATION': True, # Old refresh tokens become invalid
+    
+    # 🔐 Security Settings
+    'UPDATE_LAST_LOGIN': False,       # Don't update last_login on each token refresh
+    
+    # 🎯 Algorithm Settings
+    'ALGORITHM': 'HS256',              # Encryption algorithm for tokens
+    'SIGNING_KEY': 'your-secret-key-here', # Secret key to sign tokens
+    
+    # 📝 Header Settings
+    'AUTH_HEADER_TYPES': ('Bearer',),  # Token type in Authorization header
+                                       # Example: "Authorization: Bearer <token>"
+    
+    # 👤 User Identification
+    'USER_ID_FIELD': 'id',              # Which field identifies the user
+    'USER_ID_CLAIM': 'user_id',         # Name of the claim in token payload
+}
+
+# 📝 What the tokens contain (payload example):
+# {
+#   "user_id": 123,
+#   "exp": 1678901234,  # Expiration timestamp
+#   "iat": 1678900034,  # Issued at timestamp
+#   "token_type": "access"  # Type of token
+# }
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"

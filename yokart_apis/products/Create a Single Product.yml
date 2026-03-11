@@ -1,0 +1,45 @@
+info:
+  name: Create a Single Product
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/v1/products/create
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Samsung s 15
+      - name: slug
+        type: text
+        value: samsung-s-15
+      - name: description
+        type: text
+        value: Apple smartphone
+      - name: price
+        type: text
+        value: "999"
+      - name: stock
+        type: text
+        value: "50"
+      - name: category
+        type: text
+        value: "1"
+      - name: brand
+        type: text
+        value: "2"
+      - name: images
+        type: file
+        value:
+          - C:\Users\User\Downloads\samsung-1.jpg
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjMxNDU3LCJpYXQiOjE3NzMyMzExNTcsImp0aSI6IjcxMWJmYzcxNzNjMTRjMGY5ZTM5ODA3NzQwZGZiNGE3IiwidXNlcl9pZCI6IjMifQ.tTuYCu_HC2jWNzFzjuyZdfFjnr2i6yGJ_W584xQZTFc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
