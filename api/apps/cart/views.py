@@ -7,6 +7,8 @@ from apps.products.models import Product
 from .models import CartItem
 from .services import get_or_create_cart
 
+from .models import Cart
+from .serializers import CartSerializer
 
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
@@ -45,10 +47,6 @@ def add_to_cart(request):
         "status": True,
         "message": "Product added to cart"
     })
-
-from .models import Cart
-from .serializers import CartSerializer
-
 
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])

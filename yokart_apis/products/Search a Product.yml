@@ -5,12 +5,11 @@ info:
 
 http:
   method: GET
-  url: http://127.0.0.1:8000/api/v1/products?category=1&ordering=price&min_price=0&max_price=2000&page=1
+  url: http://127.0.0.1:8000/api/v1/products?search=iphone&category=1&ordering=price&min_price=0&page=1
   params:
     - name: search
       value: iphone
       type: query
-      disabled: true
     - name: category
       value: "1"
       type: query
@@ -23,6 +22,7 @@ http:
     - name: max_price
       value: "2000"
       type: query
+      disabled: true
     - name: page
       value: "1"
       type: query
