@@ -33,10 +33,10 @@ http:
       - name: images
         type: file
         value:
-          - C:\Users\User\Downloads\samsung-1.jpg
+          - /home/doobie/Downloads/samsung-1.jpeg
   auth:
     type: bearer
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMjMxNDU3LCJpYXQiOjE3NzMyMzExNTcsImp0aSI6IjcxMWJmYzcxNzNjMTRjMGY5ZTM5ODA3NzQwZGZiNGE3IiwidXNlcl9pZCI6IjMifQ.tTuYCu_HC2jWNzFzjuyZdfFjnr2i6yGJ_W584xQZTFc
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc1MjA0NTI2LCJpYXQiOjE3NzUyMDI3MjcsImp0aSI6ImYyN2QzNTk3ZjlmNjQzZGU4MDM1ZTJiOGMyMjQ4ODdhIiwidXNlcl9pZCI6IjEifQ.IwiHwfPuOmPFhyk9e94SEkBFz81OwetbTjW4_DLnbwA
 
 settings:
   encodeUrl: true
